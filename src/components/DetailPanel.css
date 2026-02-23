@@ -1,0 +1,263 @@
+.detail-panel {
+  width: 260px;
+  flex-shrink: 0;
+  background: #111318;
+  border-left: 1px solid #222631;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+.detail-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.detail-panel::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Toast */
+.toast {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.toast-success {
+  background: #1a3a2a;
+  color: #4caf88;
+  border-bottom: 1px solid #2a5a3a;
+}
+
+.toast-warn {
+  background: #3a2a1a;
+  color: #e0a050;
+  border-bottom: 1px solid #5a3a1a;
+}
+
+/* Detail content */
+.detail-content {
+  flex: 0 0 auto;
+}
+
+.detail-header {
+  padding: 1rem 1.1rem 0.8rem;
+  border-left: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-bottom: 1px solid #1a1d24;
+}
+
+.detail-abbr {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.detail-name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f0f2f5;
+  line-height: 1.1;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.detail-region {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 99px;
+}
+
+.detail-capital {
+  font-size: 0.72rem;
+  color: #606878;
+}
+
+/* Form */
+.detail-form {
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #606878;
+}
+
+.form-input {
+  background: #161820;
+  border: 1px solid #2a2d38;
+  border-radius: 6px;
+  color: #e0e4ef;
+  font-size: 0.82rem;
+  padding: 0.45rem 0.6rem;
+  font-family: inherit;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4fc3f7;
+}
+
+input[type="date"].form-input {
+  color-scheme: dark;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.2rem;
+}
+
+.btn-primary {
+  flex: 1;
+  background: var(--btn-color, #4fc3f7);
+  color: #0a0c10;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+  font-family: inherit;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-danger {
+  background: #2a1515;
+  color: #e05050;
+  border: 1px solid #3a1f1f;
+  border-radius: 6px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+
+.btn-danger:hover {
+  background: #3a1a1a;
+  border-color: #e05050;
+}
+
+/* Empty state */
+.detail-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  gap: 0.8rem;
+  min-height: 160px;
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  opacity: 0.4;
+}
+
+.detail-empty p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #505560;
+  line-height: 1.6;
+}
+
+/* Region Progress */
+.region-progress {
+  padding: 0.9rem 1.1rem 1.2rem;
+  border-top: 1px solid #1a1d24;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.section-title {
+  margin: 0 0 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #505560;
+}
+
+.region-row {
+  margin-bottom: 0.55rem;
+}
+
+.region-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.region-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.region-fraction {
+  font-size: 0.65rem;
+  color: #606878;
+}
+
+.region-bar-bg {
+  height: 4px;
+  background: #222631;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.region-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+  min-width: 0;
+}
