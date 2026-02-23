@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/build-gitlab-pages-nVc3H
 
 permissions:
   contents: read
