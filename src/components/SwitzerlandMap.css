@@ -1,0 +1,66 @@
+.map-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.switzerland-svg {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.45));
+}
+
+.canton-group {
+  cursor: pointer;
+}
+
+.canton-path {
+  stroke-width: 1.2;
+  transition: fill 0.2s, filter 0.15s, stroke-width 0.15s;
+}
+
+.canton-path.unvisited {
+  fill: #2a2d35;
+  stroke: #4a4f5c;
+}
+
+.canton-path.visited {
+  opacity: 0.85;
+}
+
+.canton-path.selected {
+  stroke: #ffffff !important;
+  stroke-width: 2 !important;
+  filter: brightness(1.25) drop-shadow(0 0 6px currentColor);
+}
+
+.canton-group:hover .canton-path {
+  filter: brightness(1.35);
+  stroke-width: 1.8;
+}
+
+.canton-group:hover .canton-path.unvisited {
+  fill: #3d4150;
+}
+
+.canton-label {
+  font-size: 5px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  fill: #9aa0b0;
+  pointer-events: none;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.canton-label.label-visited {
+  fill: #ffffff;
+}
+
+.canton-label.label-selected {
+  fill: #ffffff;
+  font-weight: 800;
+}

@@ -1,0 +1,97 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.8rem;
+  background: #111318;
+  border-bottom: 1px solid #222631;
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.header-flag {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f0f2f5;
+  letter-spacing: -0.01em;
+}
+
+.header-sub {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #606878;
+}
+
+.header-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.visit-count {
+  text-align: right;
+  line-height: 1.2;
+}
+
+.count-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #4fc3f7;
+}
+
+.count-divider,
+.count-total {
+  font-size: 1.1rem;
+  color: #606878;
+  font-weight: 600;
+}
+
+.count-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #606878;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.progress-ring-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.ring-bg {
+  stroke: #222631;
+}
+
+.ring-fill {
+  stroke: #4fc3f7;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.ring-pct {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #f0f2f5;
+  z-index: 1;
+}

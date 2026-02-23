@@ -1,0 +1,153 @@
+.canton-grid-panel {
+  width: 220px;
+  flex-shrink: 0;
+  background: #111318;
+  border-right: 1px solid #222631;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.grid-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 0.6rem 0.5rem 0;
+  border-bottom: 1px solid #222631;
+  flex-shrink: 0;
+}
+
+.grid-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #606878;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.4rem 0.4rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.grid-tab:hover {
+  color: #aab0c0;
+}
+
+.grid-tab.active {
+  color: #f0f2f5;
+  border-bottom-color: #4fc3f7;
+}
+
+.canton-cards {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.canton-cards::-webkit-scrollbar {
+  width: 4px;
+}
+
+.canton-cards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.canton-cards::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+
+.canton-card {
+  background: none;
+  border: 1px solid #222631;
+  border-radius: 6px;
+  padding: 0.45rem 0.55rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.canton-card:hover {
+  background: #1a1d24;
+  border-color: #383d4a;
+}
+
+.canton-card.unvisited {
+  opacity: 0.55;
+}
+
+.canton-card.visited {
+  opacity: 1;
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.canton-card.visited:hover {
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 30%, transparent);
+  border-color: var(--accent);
+}
+
+.canton-card.selected {
+  border-color: var(--accent, #4fc3f7) !important;
+  box-shadow: 0 0 0 1px var(--accent, #4fc3f7), 0 0 16px color-mix(in srgb, var(--accent, #4fc3f7) 30%, transparent);
+  opacity: 1;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1px;
+}
+
+.card-abbr {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #9aa0b0;
+  letter-spacing: 0.05em;
+}
+
+.canton-card.visited .card-abbr {
+  color: var(--accent);
+}
+
+.card-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.card-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #c8cdd8;
+  line-height: 1.2;
+}
+
+.canton-card.visited .card-name {
+  color: #f0f2f5;
+}
+
+.card-place {
+  font-size: 0.65rem;
+  color: #9aa0b0;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-date {
+  font-size: 0.62rem;
+  color: #606878;
+  margin-top: 1px;
+}
